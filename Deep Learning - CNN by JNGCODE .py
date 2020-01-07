@@ -312,10 +312,6 @@ def load_prev_models(x_train, x_test, y_train, y_test, x, y):
     dnn_model_load.optimizer
     print(dnn_model_load)
     print()
-    #Load section for DNN Model as a code comment - error due to dimensionality.
-    '''score = dnn_model_load.evaluate(x_train, x_test)
-    #print(score + "%")'''
-    print()
     #CNN MODEL LOAD:
     print("=============== CNN Model Loaded =============== ")
     cnn_model_load = load_model('cnn_model.h5')
@@ -327,15 +323,11 @@ def load_prev_models(x_train, x_test, y_train, y_test, x, y):
     cnn_model_load.optimizer
     print()
     print(cnn_model_load)
-    #Load section for CNN Model as a code comment - error due to dimensionality.
-    '''scoreCNN = cnn_model_load.evaluate(x_train, x_test)
-    #print(scoreCNN + "%")'''
     print("==================================================================")
     return
     
-# ========================= Assignment 1 attachment ==========================
+# ========================= Machine Learning: KNN attachment ==========================
 
-# Assignment 1 - Using KNN-SKLearn libraries.
 def knn_skl(x_train, x_test, y_train, y_test, x, y):
     global skl_knn_pred
     print("SKL KNN-Model running...")
@@ -349,7 +341,7 @@ def knn_skl(x_train, x_test, y_train, y_test, x, y):
     #Return results of KNN accuracy to print.
     return skl_knn_accuracy
 
-#My KNN Algorithm without SKLearn
+#My KNN Algorithm from scratch (without SKLearn KNN classifier)
 def myKNN(x_train, y_train, x_test, y_test, k):
     print("My KNN-Model running...")
     #storing all predicted distances in an array.
